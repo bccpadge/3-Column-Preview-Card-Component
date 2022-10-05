@@ -49,8 +49,8 @@ Users should be able to:
 
 ## Continued development
 
-I hope to continue building each project close to the design as possible with organized code. 
+I hope to continue building each project close to the design as possible with organized code. Also, utilizing the article tag in future projects as well.
 
 ## Acknowledgments
 
-Youtube
+YouTube
