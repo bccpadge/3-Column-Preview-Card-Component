@@ -105,7 +105,7 @@ html{
   font-size: 100%;
 }
 
-h2{
+h1{
   font-family: var(--ff-big-shoulder-display);
   color: var(--light-gray-color);
   text-transform: uppercase;
@@ -223,7 +223,7 @@ button{
 
 @media (min-width: 64em){
   .card{
-    padding-block: 3rem;
+    padding-block: 2.5rem;
   }
 
 }
