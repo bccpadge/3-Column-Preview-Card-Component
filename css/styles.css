@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* CUSTOM PROPERTIES */
+:root {
+	--bright-orange-color: hsl(31, 77%, 52%);
+	--dark-cyan-color: hsl(184, 100%, 22%);
+	--very-dark-cyan-color: hsl(179, 100%, 13%);
+	/* paragraphs */
+	--transparent-white-color: hsla(0, 0%, 100%, 0.75);
+	/* background, headings, buttons */
+	--light-gray-color: hsl(0, 0%, 95%);
+
+	--fs-15: 0.938rem;
+	--fw-700: 700;
+	--ff-lexand-deca: 'Lexend Deca', sans-serif;
+	--ff-big-shoulder-display: 'Big Shoulders Display', cursive;
+}
+
+/* RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-size: var(--fs-15);
+  font-family: var(--ff-lexand-deca);
+  background-color: var(--light-gray-color);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html{
+  font-size: 100%;
+}
+
+h2{
+  font-family: var(--ff-big-shoulder-display);
+  color: var(--light-gray-color);
+  text-transform: uppercase;
+}
+
+p{
+  color: var(--transparent-white-color);
+  line-height: 1.8;
+}
+
+button{
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+/* REUSABLE CLASSES */
+.container{
+  margin-block: 4.5rem;
+}
+
+.card-title{
+  font-size: 1.9rem;
+  padding-block: .8rem;
+}
+
+.card-description{
+  font-size: 1rem;
+  padding-inline-end: 1.3rem;
+  padding-block-end: 1rem;
+}
+
+.btn:hover{
+  border: 1px solid white;
+  background: none;
+  color: var(--light-gray-color);
+}
+
+/* CARD STYLES */
+.card{
+  padding: 2rem;
+}
+
+/* CARD BUTTON */
+.btn{
+  background-color: var(--light-gray-color);
+  margin-block-start: 1.5rem;
+  padding: 1rem 2.5rem;
+  border-radius: 3.125rem;
+  transition: .3s .1s;
+}
+
+.btn-orange{
+  color: var(--bright-orange-color);
+}
+
+.btn-dark-cyan{
+  color: var(--dark-cyan-color);
+}
+
+.btn-very-dark-cyan{
+  color: var(--very-dark-cyan-color);
+}
+
+
+/* CHANGE BACKGROUND COLOR ON EACH CARD */
+.sedans{
+  background-color: var(--bright-orange-color);
+  border-radius: .625rem .625rem 0 0;
+}
+
+.suvs{
+  background-color: var(--dark-cyan-color);
+}
+
+.luxury{
+  background-color: var(--very-dark-cyan-color);
+  border-radius: 0 0 .625rem .625rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 62em){
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card{
+    max-width: 19.375rem;
+  }
+
+  .sedans{
+    border-radius: .625rem 0 0 .625rem;
+  }
+
+  .luxury{
+    border-radius: 0 .625rem .625rem 0;
+  }
+
+  .btn{
+    margin: 5rem 0 1rem 0;
+  }
+
+  .card-title{
+    font-size: 2.5rem;
+  }
+
+  .card-description{
+    line-height: 1.9;
+  }
+}
+
+@media (min-width: 64em){
+  .card{
+    padding-block: 3rem;
+  }
+
+}
